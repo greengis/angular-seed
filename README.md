@@ -1,1 +1,2 @@
-# angular-seed #
+# Angular-Seed #
+
