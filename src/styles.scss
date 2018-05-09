@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+//== Vendor
+//@import '../node_modules/font-awesome/css/font-awesome.css';
+@import '../node_modules/sweetalert2/dist/sweetalert2.css';
+@import '../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
+@import '../node_modules/jointjs/css/layout.css';
+@import '../node_modules/jointjs/css/themes/material.css';
+@import '../node_modules/jointjs/css/themes/default.css';
+
+//== map
+@import url('http://www.ispongecity.com/arcgis_js_api/library/3.23/3.23/dijit/themes/claro/claro.css');
+@import url('http://www.ispongecity.com/arcgis_js_api/library/3.23/3.23/esri/css/esri.css');
+
+//== Bootstrap
+@import "./assets/styles/bootstrap.scss";
+//== FontAwesome
+@import "./assets/styles/fontawesome/css/fontawesome-all.css";
+//== Application
+@import "./assets/styles/app.scss";

@@ -1,0 +1,15 @@
+.map-info-panel{
+    width:350px;
+    max-height:400px;
+    position: absolute;
+    top:60px;
+    left:10px;
+    z-index: 101;
+    overflow-y: auto;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}

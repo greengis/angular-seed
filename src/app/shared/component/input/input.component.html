@@ -1,0 +1,5 @@
+<div class="input-group" style="width: 100%;">
+  <span class="input-group-addon" [ngStyle]="{ width : width }"><span [ngClass]="icon"></span> {{title}}</span>
+  <input [type]="type" class="form-control" #propertyname="ngModel" [name]="title" [ngModel]="_property" (ngModelChange)="change($event)" [required]="required" [readonly]="readonly">
+  <span class="ngg-input-required" *ngIf="required && propertyname.errors && (propertyname.dirty || propertyname.touched)">必填项</span>
+</div>

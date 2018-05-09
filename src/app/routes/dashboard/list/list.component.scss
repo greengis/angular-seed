@@ -1,0 +1,9 @@
+.list .list-grid1{
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+}
+
+.list .list-grid2{
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 100px 100px;
+}

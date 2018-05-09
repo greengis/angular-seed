@@ -1,0 +1,121 @@
+<div class="panel drawer-panel map-layer-panel full-height" [ngClass]="{'drawer-open': option.open}">
+  <span class="drawer-panel-btn map-layer-panel-btn" (click)="option.open =! option.open"><i class="fas fa-bars"></i> 图层</span>
+  <div class="drawer-panel-head"><span>图层列表</span></div>
+  <div class="drawer-panel-body full-height">
+    <div class="well full-height p-sm" style="overflow-y:auto;">
+      <div class="panel mb-sm">
+        <div class="panel-heading">
+          <span>底图类型</span>
+          <a class="pull-right fas" [ngClass]="{'fa-angle-down': !option.group0,'fa-angle-up':option.group0}" (click)="option.group0 = !option.group0"></a>
+        </div>
+        <div class="panel-body" [collapse]="!option.group0">
+          <div class="panel mb-sm">
+            <div class="panel-heading">
+              <div class="radio c-radio">
+                <label>
+                  <input type="radio" [value]="'amap_base'" [(ngModel)]="option.map_type" (ngModelChange)="changeBaseMap()"/>
+                  <span class="fas fa-circle"></span>高德地形
+                </label>
+                <a class="pull-right fas" [ngClass]="{'fa-angle-down': !option.group01,'fa-angle-up':option.group01}" (click)="option.group01 = !option.group01"></a>
+              </div>
+            </div>
+            <div class="panel-body" [collapse]="!option.group01">
+              <div class="panel mb-sm" *ngFor="let layer of option.base_layers">
+                <div class="panel-heading">
+                  <div class="checkbox c-checkbox m0">
+                    <label>
+                      <input type="checkbox" [name]="layer.name" [(ngModel)]="layer.is_check" (ngModelChange)="changeBaseMap()"/>
+                      <span class="fas fa-check"></span>{{layer.name}}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel mb-sm">
+            <div class="panel-heading">
+              <div class="radio c-radio">
+                <label>
+                  <input type="radio" [value]="'amap_image'" [(ngModel)]="option.map_type" (ngModelChange)="changeBaseMap()"/>
+                  <span class="fas fa-circle"></span>高德影像
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel mb-sm">
+        <div class="panel-heading">
+          <span>海绵项目</span>
+          <a class="pull-right fas" [ngClass]="{'fa-angle-down': !option.group1,'fa-angle-up':option.group1}" (click)="option.group1 = !option.group1"></a>
+        </div>
+        <div class="panel-body" [collapse]="!option.group1">
+          <div class="panel mb-sm" *ngFor="let layer of dataMapService.config?.layers.sponge_layers" [hidden]="layer.hidden">
+            <div class="panel-heading">
+              <div class="checkbox c-checkbox m0">
+                <label>
+                  <input type="checkbox" [name]="layer.display_name" [(ngModel)]="layer.is_check" (ngModelChange)="showMapLayer(layer)"/>
+                  <span class="fas fa-check"></span>{{layer.display_name}}
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel mb-sm">
+        <div class="panel-heading">
+          <span>分区边界</span>
+          <a class="pull-right fas" [ngClass]="{'fa-angle-down': !option.group2,'fa-angle-up':option.group2}" (click)="option.group2 = !option.group2"></a>
+        </div>
+        <div class="panel-body" [collapse]="!option.group2">
+          <div class="panel mb-sm" *ngFor="let layer of dataMapService.config?.layers.region_layers" [hidden]="layer.hidden">
+            <div class="panel-heading">
+              <div class="checkbox c-checkbox m0">
+                <label>
+                  <input type="checkbox" [name]="layer.display_name" [(ngModel)]="layer.is_check" (ngModelChange)="showMapLayer(layer)"/>
+                  <span class="fas fa-check"></span>{{layer.display_name}}
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel mb-sm">
+        <div class="panel-heading">
+          <span>排水设施</span>
+          <a class="pull-right fas" [ngClass]="{'fa-angle-down': !option.group3,'fa-angle-up':option.group3}" (click)="option.group3 = !option.group3"></a>
+        </div>
+        <div class="panel-body" [collapse]="!option.group3">
+          <div class="panel mb-sm" *ngFor="let layer of dataMapService.config?.layers.drainage_layers" [hidden]="layer.hidden">
+            <div class="panel-heading">
+              <div class="checkbox c-checkbox m0">
+                <label>
+                  <input type="checkbox" [name]="layer.display_name" [(ngModel)]="layer.is_check" (ngModelChange)="showMapLayer(layer)"/>
+                  <span class="fas fa-check"></span>{{layer.display_name}}
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel mb-sm">
+        <div class="panel-heading">
+          <span>基础地形</span>
+          <a class="pull-right fas" [ngClass]="{'fa-angle-down': !option.group4,'fa-angle-up':option.group4}" (click)="option.group4 = !option.group4"></a>
+        </div>
+        <div class="panel-body" [collapse]="!option.group4">
+          <div class="panel mb-sm" *ngFor="let layer of dataMapService.config?.layers.base_layers" [hidden]="layer.hidden">
+            <div class="panel-heading">
+              <div class="checkbox c-checkbox m0">
+                <label>
+                  <input type="checkbox" [name]="layer.display_name" [(ngModel)]="layer.is_check" (ngModelChange)="showMapLayer(layer)"/>
+                  <span class="fas fa-check"></span>{{layer.display_name}}
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

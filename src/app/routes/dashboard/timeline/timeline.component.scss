@@ -1,0 +1,56 @@
+.module-body{
+  display:grid;
+  grid-gap : 10px;
+  grid-template-areas: "panel1 panel1"
+                          "panel2 panel3";
+  grid-template-columns: 1fr 1fr;
+}
+
+.panel1{
+  grid-area: panel1;
+}
+
+.panel2{
+  grid-area: panel2;
+}
+
+.panel3{
+  grid-area: panel3;
+}
+
+.content-grid{
+  display: grid;
+  padding: 10px;
+  grid-gap :10px;
+  width: 100%;
+  height: 120px;
+  grid-template-areas: "a b c"
+                          ". e e"
+                          "f f f";
+  grid-template-rows: 30px 1fr 15px;
+  grid-template-columns: 30px 1fr 1fr;
+}
+
+.content-avatar{
+  grid-area: a;
+}
+
+.content-user{
+  grid-area: b;
+}
+
+.content-date{
+  grid-area: c;
+  text-align: right;
+  font-size:9px;
+}
+
+.content-desc{
+  grid-area: e;
+}
+
+.content-address{
+  grid-area: f;
+  text-align: right;
+  font-size:9px;
+}

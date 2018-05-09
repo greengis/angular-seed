@@ -1,0 +1,43 @@
+/* start  module */
+.module-content{
+    position: relative;
+    height:100%;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    background: #eee;
+}
+
+.module-content .module-body{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding:0 10px;
+    margin: 10px 0;
+    background: #eee;
+}
+.module-content .module-header {
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+    background: #fdfdfd;
+    display: flex;
+}
+.module-content .module-header .module-header-title {
+    line-height: 50px;
+    font-size: 16px;
+    float: left;
+    color: #333;
+}
+.module-content .module-header .module-header-title i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+.module-content .module-header .module-header-space {
+    flex : 1 0 0;
+}
+.module-content .module-header .module-header-tabs{
+    align-self: flex-end;
+    text-align: right;
+}
+
+/* end  module */

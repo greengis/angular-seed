@@ -1,0 +1,17 @@
+<div class="panel map-info-panel"  *ngIf="select_features.length > 0">
+  <div class="panel-heading">
+    <div class="text-title">{{cur_select_feature.layerName}}-{{cur_select_feature.feature.attributes[cur_select_feature.displayFieldName]}}</div>
+  </div>
+  <div class="panel-body">
+<!--    <div *ngFor="let category of cur_select_feature.categories">
+      <div class="p-sm" style="font-size: 12px;">{{category}}</div>-->
+      <div class="input-group mb-sm" *ngFor="let attr of cur_select_feature.fields">
+        <span class="input-group-addon" style="width: 125px;max-width: 125px">{{attr.FieldDisplayName}}:</span>
+        <input class="form-control" [ngModel]="attr.Value" readonly>
+      </div>
+<!--    </div>-->
+  </div>
+  <div class="panel-footer pv-sm clearfix">
+    <pagination class="pagination-sm pull-right" (pageChanged)="pageChanged($event)" [totalItems]="paging.total_items" [(ngModel)]="paging.current_page" [maxSize]="paging.display_pages" [itemsPerPage]="paging.page_size" [boundaryLinks]="true" [rotate]="false" (numPages)="paging.num_pages = $event" firstText="<<" previousText="<" nextText=">" lastText=">>"></pagination>
+  </div>
+</div>

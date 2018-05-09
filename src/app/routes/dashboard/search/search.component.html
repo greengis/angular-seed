@@ -1,0 +1,50 @@
+<div class="module-content">
+  <div class="module-header">
+    <h5 class="module-header-title"><i class="fas fa-search"></i>搜索示例</h5>
+  </div>
+  <div class="module-body">
+    <div class="panel">
+      <div class="panel-body">
+        <div class="search-input">
+          <i class="fas fa-search search-icon"></i>
+          <input class="form-control" placeholder="搜索组件" [(ngModel)]="option.keyword">
+          <i class="close-icon fas fa-times close-link close-link-sm" *ngIf="option.keyword.length > 0" (click)="option.keyword =''"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top: 10px;">
+      <div class="panel-body">
+        <div class="search-area">
+          <nz-datepicker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzPlaceHolder]="'选择月份'" [nzMode]="'month'" [nzFormat]="'YYYY年MM月'" [nzAllowClear]="false"></nz-datepicker>
+          <nz-datepicker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzPlaceHolder]="'选择日期'"></nz-datepicker>
+          <nz-datepicker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzPlaceHolder]="'选择时间'" [nzFormat]="'YYYY-MM-DD HH:mm:ss'" [nzShowTime]="true"></nz-datepicker>
+          <div class="search-space"></div>
+          <div class="search-input search-input-sm">
+            <i class="fas fa-search search-icon"></i>
+            <input class="form-control" placeholder="搜索组件" [(ngModel)]="option.keyword">
+            <i class="close-icon fas fa-times close-link close-link-sm" *ngIf="option.keyword.length > 0" (click)="option.keyword =''"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top: 10px;">
+      <div class="panel-body">
+        <div class="search-area">
+          <nz-datepicker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzFormat]="'YYYY-MM-DD'" [nzDisabledDate]="disabledStartDate"  [nzPlaceHolder]="'开始日期'" [nzAllowClear]="false"></nz-datepicker> 至
+          <nz-datepicker style="margin-left: 5px;margin-right:5px;" [(ngModel)]="option.end_date" [nzFormat]="'YYYY-MM-DD'" [nzDisabledDate]="disabledEndDate"  [nzPlaceHolder]="'结束日期'" [nzAllowClear]="false"></nz-datepicker>
+          <nz-input style="width:250px;margin-right:5px;" [ngModel]="(option.start_date | date : 'yyyy-MM-dd') + '至' + (option.end_date | date : 'yyyy-MM-dd')" ></nz-input>
+          <div class="search-space"></div>
+          <div class="search-input search-input-sm">
+            <i class="fas fa-search search-icon"></i>
+            <input class="form-control" placeholder="搜索组件" [(ngModel)]="option.keyword">
+            <i class="close-icon fas fa-times close-link close-link-sm" *ngIf="option.keyword.length > 0" (click)="option.keyword =''"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

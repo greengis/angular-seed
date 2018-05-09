@@ -1,0 +1,28 @@
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true" [config]="{backdrop: false,ignoreBackdropClick:true}" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <h4 class="modal-title" >添加标签</h4>
+      </div>
+      <div class="modal-body" >
+        <form #labelForm="ngForm" role="form" (ngSubmit)="submit()" >
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="input-group mb">
+                <span class="input-group-addon" style="min-width: 125px">标签文本:</span>
+                <input type="text" class="form-control" name="label" [(ngModel)]="label" required/>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row text-right ml-lg mr mt">
+            <button type="submit" class="btn btn-success" [disabled]="!labelForm.form.valid"> 提交</button>
+            <button type="button" class="btn btn-danger" (click)="cancel()"> 取消</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

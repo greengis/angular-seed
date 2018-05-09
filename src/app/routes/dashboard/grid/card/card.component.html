@@ -1,0 +1,75 @@
+<div class="module-content">
+  <div class="module-header">
+    <h5 class="module-header-title"><i class="fas fa-table"></i>卡片示例</h5>
+  </div>
+  <div class="module-body">
+    <div class="panel">
+      <div class="panel-body card1">
+        <span class="card1-avatar avatar-text avatar-text-sm">{{record.user.substring(0,1)}}</span>
+        <strong class="card1-user" >{{record.user}}</strong>
+        <div class="card1-date"><span>{{record.date | date : 'yyyy-MM-dd HH:mm:ss'}}</span></div>
+        <span class="card1-desc">{{record.desc}}</span>
+        <div class="card1-photo">
+          <a href="assets/img/dashboard/card/01.jpg" data-fancybox="images">
+            <img class="img-thumbnail card1-photo-image" src="assets/img/dashboard/card/01.jpg"/>
+          </a>
+          <a href="assets/img/dashboard/card/02.jpg" data-fancybox="images">
+            <img class="img-thumbnail card1-photo-image" src="assets/img/dashboard/card/02.jpg"/>
+          </a>
+          <a href="assets/img/dashboard/card/03.png" data-fancybox="images">
+            <img class="img-thumbnail card1-photo-image" src="assets/img/dashboard/card/03.png"/>
+          </a>
+          <a href="assets/img/dashboard/card/01.jpg" data-fancybox="images">
+            <img class="img-thumbnail card1-photo-image" src="assets/img/dashboard/card/01.jpg"/>
+          </a>
+          <a href="assets/img/dashboard/card/02.jpg" data-fancybox="images">
+            <img class="img-thumbnail card1-photo-image" src="assets/img/dashboard/card/02.jpg"/>
+          </a>
+          <a href="assets/img/dashboard/card/03.png" data-fancybox="images">
+            <img class="img-thumbnail card1-photo-image" src="assets/img/dashboard/card/03.png"/>
+          </a>
+        </div>
+        <div class="card1-address"><span class="fas fa-location-arrow"> {{record.address}}</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-body card2">
+        <span class="card2-avatar avatar-text avatar-text-sm">{{record.user.substring(0,1)}}</span>
+        <strong class="card2-user" >{{record.user}}</strong>
+        <div class="card2-date"><span>{{record.date | date : 'yyyy-MM-dd HH:mm:ss'}}</span></div>
+        <span class="card2-desc">{{record.desc}}</span>
+        <div class="card2-photo">
+          <a class="card2-photo-image" href="assets/img/dashboard/card/01.jpg" data-fancybox="images2">
+            <img class="img-thumbnail card2-photo-image" src="assets/img/dashboard/card/01.jpg"/>
+          </a>
+          <a class="card2-photo-image" href="assets/img/dashboard/card/02.jpg" data-fancybox="images2">
+            <img class="img-thumbnail card2-photo-image" src="assets/img/dashboard/card/02.jpg"/>
+          </a>
+          <a class="card2-photo-image" href="assets/img/dashboard/card/03.png" data-fancybox="images2">
+            <img class="img-thumbnail card2-photo-image" src="assets/img/dashboard/card/03.png"/>
+          </a>
+          <a class="card2-photo-image" href="assets/img/dashboard/card/01.jpg" data-fancybox="images2">
+            <img class="img-thumbnail card2-photo-image" src="assets/img/dashboard/card/01.jpg"/>
+          </a>
+          <a class="card2-photo-image" href="assets/img/dashboard/card/02.jpg" data-fancybox="images2">
+            <img class="img-thumbnail card2-photo-image" src="assets/img/dashboard/card/02.jpg"/>
+          </a>
+          <a class="card2-photo-image" href="assets/img/dashboard/card/03.png" data-fancybox="images2">
+            <img class="img-thumbnail card2-photo-image" src="assets/img/dashboard/card/03.png"/>
+          </a>
+        </div>
+        <div class="card2-address"><span class="fas fa-location-arrow"> {{record.address}}</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="card3">
+        <div class="card3-photo">
+          <ngg-carousel [urls]="urls"></ngg-carousel>
+        </div>
+        <div class="card3-desc"><span>{{record.desc}}</span></div>
+        <div class="card3-date"><span class="fas fa-clock"> {{record.date | date : 'yyyy-MM-dd HH:mm:ss'}}</span> <span class="fas fa-user"> {{record.user}}</span></div>
+        <div class="card3-address"><span class="fas fa-location-arrow"> {{record.address}}</span></div>
+      </div>
+    </div>
+  </div>
+</div>

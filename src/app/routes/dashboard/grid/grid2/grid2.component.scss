@@ -1,0 +1,25 @@
+.module-body{
+  display : grid;
+  grid-gap : 10px;
+  grid-template-rows: 70px 1fr 50px;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-areas: "top top top"
+                            "left center right"
+                            "bottom bottom bottom";
+}
+
+.panel-top{
+  grid-area: top;
+}
+.panel-left{
+  grid-area: left;
+}
+.panel-center{
+  grid-area: center;
+}
+.panel-right{
+  grid-area: right;
+}
+.panel-bottom{
+  grid-area: bottom;
+}

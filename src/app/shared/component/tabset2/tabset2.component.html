@@ -1,0 +1,10 @@
+<div class="tab-heading">
+  <ul class="nav nav-pills" [ngStyle]="{ 'text-align' : align }">
+    <li *ngFor="let tab of tabs" [ngClass]="{'active': tab.active}">
+      <a (click)="active(tab)">{{tab.heading}}</a>
+    </li>
+  </ul>
+</div>
+<div class="tab-content">
+  <ng-content></ng-content>
+</div>

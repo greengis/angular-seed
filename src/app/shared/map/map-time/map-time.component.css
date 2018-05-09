@@ -1,0 +1,16 @@
+.map-time-panel{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    z-index: 1052;
+    height: 68px;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    background-color: rgba(27, 27, 27, 0.7);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}

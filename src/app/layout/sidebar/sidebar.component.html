@@ -1,0 +1,27 @@
+<div class="sidebar">
+    <div class="sidebar-header">
+        <a class="team-logo">
+            <img width="40" align="center" alt="光大海绵" tooltip="光大海绵" placement="bottom"
+                 src="http://7xlblb.dl1.z0.glb.clouddn.com/logo-guangda.png">
+        </a>
+    </div>
+    <div class="sidebar-body">
+        <ul class="nav-apps">
+            <li *ngFor='let item of menuItems' [ngClass]="{'nav-heading': item.heading}"
+                [routerLinkActive]="['active']">
+                <a class="app-item" [routerLink]="item.link" [attr.route]="item.link" title="{{item.text}}">
+                    <span class="item-icon">
+                        <i class="icon-default" [ngClass]="item.icon"></i>
+                        <i class="icon-hover" [ngClass]="item.icon"></i>
+                    </span>
+                    <span class="name">{{item.text}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar-footer">
+        <span class="avatar-text" tooltip="退出登录">
+            <i class="fas fa-sign-out-alt" (click)="logout()" ></i>
+        </span>
+    </div>
+</div>

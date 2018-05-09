@@ -1,0 +1,116 @@
+
+<!--<div style="position: absolute;height: 100%;width:100%;overflow-y: auto;text-align: center;">-->
+  <!--<img src="assets/img/dashboard/dashboard.png" alt="">-->
+<!--</div>-->
+
+<div class="system-content">
+  <div class="system-left">
+    <div class="system-left-header">
+      <h5 class="title">工作台</h5>
+    </div>
+    <div class="system-left-body">
+      <div class="section">
+        <div class="section-header" (click)="componentVisible =!componentVisible">
+          <a class="expand-icon">
+            <i class="fas fa-caret-right caret-down" [ngClass]="{'rotate-caret': componentVisible}"></i>
+          </a>
+          <a class="title">组件</a>
+        </div>
+        <div class="section-body collapse" [collapse]="!componentVisible">
+          <ul>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'form'">
+                <i class="fas fa-window-restore item-icon"></i>Form
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'panel'">
+                <i class="fas fa-columns item-icon"></i>Panel
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'list'">
+                <i class="fas fa-list item-icon"></i>List
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'tab'">
+                <i class="fas fa-archive item-icon"></i>Tab
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'tree'">
+                <i class="fas fa-tree item-icon"></i>Tree
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'search'">
+                <i class="fas fa-search item-icon"></i>Search
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'timeline'">
+                <i class="fas fa-server item-icon"></i>Timeline
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'avatar'">
+                <i class="fas fa-user item-icon"></i>Avatar
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'chart'">
+                <i class="fas fa-chart-line item-icon"></i>Chart
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'modal'">
+                <i class="fas fa-window-restore item-icon"></i>Modal
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'upload'">
+                <i class="fas fa-upload item-icon"></i>Upload
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header" (click)="layoutVisible =!layoutVisible">
+          <a class="expand-icon">
+            <i class="fas fa-caret-right caret-down" [ngClass]="{'rotate-caret': layoutVisible}"></i>
+          </a>
+          <a class="title">布局</a>
+        </div>
+        <div class="section-body collapse" [collapse]="!layoutVisible">
+          <ul>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'grid1'">
+                <i class="fas fa-table item-icon"></i>Grid1
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'grid2'">
+                <i class="fas fa-table item-icon"></i>Grid2
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'grid3'">
+                <i class="fas fa-table item-icon"></i>Grid3
+              </a>
+            </li>
+            <li>
+              <a class="section-item" [routerLinkActive]="['active']"  [routerLink]="'card'">
+                <i class="fas fa-table item-icon"></i>Card
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="system-body">
+    <router-outlet></router-outlet>
+  </div>
+</div>

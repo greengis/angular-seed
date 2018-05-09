@@ -1,0 +1,18 @@
+<div class="panel drawer-panel map-thematic-panel full-height" [ngClass]="{'drawer-open': option.open}">
+  <span class="drawer-panel-btn map-thematic-panel-btn" (click)="option.open =! option.open"><i class="fab fa-trello"></i> 专题</span>
+  <div class="drawer-panel-head"><span>专题列表</span></div>
+  <div class="drawer-panel-body full-height">
+    <div class="well full-height p-sm" style="overflow-y:auto;">
+      <div class="panel mb-sm" *ngFor="let layer of dataMapService.config?.thematic_layers">
+        <div class="panel-heading">
+          <div class="checkbox c-checkbox m0">
+            <label>
+              <input type="checkbox" [name]="layer.display_name" [(ngModel)]="layer.is_check" />
+              <span class="fas fa-check"></span>{{layer.display_name}}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

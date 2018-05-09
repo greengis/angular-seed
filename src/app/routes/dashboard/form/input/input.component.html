@@ -1,0 +1,21 @@
+<div class="panel input-grid1">
+  <ngg-input [(property)] = "username" [required]="true" [title]="'用户'" [icon]="'fas fa-user'"></ngg-input>
+  <ngg-input [type]="'password'" [(property)] = "password" [required]="true" [title]="'密码'" [icon]="'fas fa-lock'"></ngg-input>
+  <ngg-input [type]="'number'" [(property)] = "age" [required]="false" [title]="'年龄'"></ngg-input>
+  <ngg-input [type]="'email'" [(property)] = "email" [required]="false" [title]="'邮件'" ></ngg-input>
+  <!--<ngg-input [type]="'date'" [(property)] = "date_1" (propertyChange)="change($event)" [required]="true" [title]="'日期(String)'" ></ngg-input>-->
+  <ngg-input [type]="'date'" [(property)] = "date_2" (propertyChange)="change($event)" [required]="true" [title]="'日期(Date)'" ></ngg-input>
+  <ngg-input [type]="'time'" [(property)] = "time_2" (propertyChange)="change($event)" [required]="true" [title]="'时间(Time)'" ></ngg-input>
+  <ngg-input [type]="'datetime'" [(property)] = "datetime_2" (propertyChange)="change($event)" [required]="true" [title]="'日期时间'" ></ngg-input>
+</div>
+
+<div class="panel input-grid2" style="margin-top: 10px">
+  <ngg-input [(property)] = "username" [required]="true" [title]="'用户'" [icon]="'fas fa-user'" [readonly]="true"></ngg-input>
+  <ngg-input [type]="'password'" [(property)] = "password" [required]="true" [title]="'密码'" [icon]="'fas fa-lock'"></ngg-input>
+  <ngg-input [type]="'number'" [(property)] = "age" [required]="false" [title]="'年龄'"></ngg-input>
+  <ngg-input [type]="'email'" [(property)] = "email" [required]="false" [title]="'邮件'" ></ngg-input>
+
+  <ngg-input [type]="'date'" [(property)] = "date_2" (propertyChange)="change($event)" [required]="true" [title]="'日期(Date)'" [readonly]="false"></ngg-input>
+  <ngg-input [type]="'time'" [(property)] = "time_2" (propertyChange)="change($event)" [required]="true" [title]="'时间(Time)'" ></ngg-input>
+  <ngg-input [type]="'datetime'" [(property)] = "datetime_2" (propertyChange)="change($event)" [required]="true" [title]="'日期时间'" ></ngg-input>
+</div>

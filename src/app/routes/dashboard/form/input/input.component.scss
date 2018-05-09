@@ -1,0 +1,10 @@
+.input-grid1 {
+  display: grid;
+  grid-gap: 5px;
+}
+
+.input-grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}

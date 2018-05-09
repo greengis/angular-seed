@@ -1,0 +1,26 @@
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true" [config]="{backdrop: true,ignoreBackdropClick:true}" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <div class="modal-header-left">
+          标题
+        </div>
+        <div class="modal-header-right">
+          <a (click)="hide()"> <i class="fa fa-times"></i></a>
+        </div>
+      </div>
+      <div class="modal-body input-grid2" >
+        <ngg-input [(property)] = "record.user" [required]="true" [title]="'用户'" [readonly]="true"></ngg-input>
+        <ngg-input [(property)] = "record.desc" [required]="false" [title]="'描述'" [readonly]="true"></ngg-input>
+        <ngg-input [(property)] = "record.status" [required]="true" [title]="'状态'" [readonly]="true"></ngg-input>
+        <ngg-input [type]="'date'" [(property)] = "record.date" [required]="false" [title]="'时间'" [readonly]="true"></ngg-input>
+        <ngg-input [(property)] = "record.address" [required]="false" [title]="'地址'" [readonly]="true"></ngg-input>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success">确定</button>
+        <button class="btn btn-danger" (click)="hide()">取消</button>
+      </div>
+    </div>
+  </div>
+</div>

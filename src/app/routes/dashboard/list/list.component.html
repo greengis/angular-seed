@@ -1,0 +1,103 @@
+<div class="module-content">
+  <div class="module-header">
+    <h5 class="module-header-title"><i class="fas fa-columns"></i>列表示例</h5>
+  </div>
+  <div class="module-body">
+    <div class="panel">
+      <div class="panel-heading">
+        <span class="panel-title">用户日志1</span>
+      </div>
+      <div class="panel-body">
+        <div class="list">
+          <div class="list-body">
+            <div *ngFor="let log of login_logs">
+              <nz-popover [nzTitle]="'日志详情'"  [nzPlacement]="'bottom'">
+                <div nz-popover class="list-grid-item list-grid-item-border list-grid1" [ngClass]="{'bc-success':log.action ==='登入','bc-danger':log.action ==='登出'}">
+                  <div><span>{{log.date | date:'yyyy-MM-dd' }}</span></div>
+                  <div><span>{{log.country}}</span></div>
+                  <div><span class="label" [ngClass]="{ 'label-success': log.action ==='登入', 'label-danger':log.action ==='登出'}">{{log.action}}</span></div>
+                </div>
+                <ng-template #nzTemplate>
+                  <div>
+                    <div class="pop-item"><span class="pop-title">IP:</span><span>{{log.ip}}</span></div>
+                    <div class="pop-item"><span class="pop-title">日期:</span><span>{{log.date | date:'yyyy-MM-dd HH:mm:ss' }}</span></div>
+                    <div class="pop-item"><span class="pop-title">地址:</span><span>{{log.country}}</span></div>
+                    <div class="pop-item"><span class="pop-title">网关:</span><span>{{log.area}}</span></div>
+                    <div class="pop-item"><span class="pop-title">状态:</span><span class="label" [ngClass]="{ 'label-success': log.action ==='登入', 'label-danger':log.action ==='登出'}">{{log.action}}</span></div>
+                  </div>
+                </ng-template>
+              </nz-popover>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:10px;">
+      <div class="panel-heading">
+        <span class="panel-title">用户日志2</span>
+      </div>
+      <div class="panel-body">
+        <div class="list">
+          <div class="list-body">
+            <div *ngFor="let log of login_logs">
+              <nz-popover [nzTitle]="'日志详情'"  [nzPlacement]="'bottom'">
+                <div nz-popover class="list-grid-item list-grid-item-large list-grid-item-border list-grid1" [ngClass]="{'bc-success':log.action ==='登入','bc-danger':log.action ==='登出'}">
+                  <div><span>{{log.date | date:'yyyy-MM-dd' }}</span></div>
+                  <div><span>{{log.country}}</span></div>
+                  <div><span class="label" [ngClass]="{ 'label-success': log.action ==='登入', 'label-danger':log.action ==='登出'}">{{log.action}}</span></div>
+                </div>
+                <ng-template #nzTemplate>
+                  <div>
+                    <div class="pop-item"><span class="pop-title">IP:</span><span>{{log.ip}}</span></div>
+                    <div class="pop-item"><span class="pop-title">日期:</span><span>{{log.date | date:'yyyy-MM-dd HH:mm:ss' }}</span></div>
+                    <div class="pop-item"><span class="pop-title">地址:</span><span>{{log.country}}</span></div>
+                    <div class="pop-item"><span class="pop-title">网关:</span><span>{{log.area}}</span></div>
+                    <div class="pop-item"><span class="pop-title">状态:</span><span class="label" [ngClass]="{ 'label-success': log.action ==='登入', 'label-danger':log.action ==='登出'}">{{log.action}}</span></div>
+                  </div>
+                </ng-template>
+              </nz-popover>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:10px;">
+      <div class="panel-heading">
+        <span class="panel-title">防汛消息</span>
+      </div>
+      <div class="panel-body">
+        <div class="list">
+          <div class="list-header list-grid2">
+            <div>
+              来源
+            </div>
+            <div>
+              名称
+            </div>
+            <div>
+              描述
+            </div>
+            <div>
+              时间
+            </div>
+            <div>
+              通知
+            </div>
+          </div>
+          <div class="list-body">
+            <div class="list-grid-item list-grid2" *ngFor="let message of messages">
+              <div>{{message.source}}</div>
+              <div>{{message.name}}</div>
+              <div>{{message.description}}</div>
+              <div><span>{{message.date | date : 'HH:mm'}}</span></div>
+              <div><button class="btn btn-xs btn-primary">{{message.dealt == 0 ? '通知': '再通知'}}</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

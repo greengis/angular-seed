@@ -1,0 +1,25 @@
+<app-example-modal-dialog #dialog></app-example-modal-dialog>
+<div class="module-content">
+  <div class="module-header">
+    <h5 class="module-header-title"><i class="fas fa-window-restore"></i>模态示例</h5>
+  </div>
+  <div class="module-body">
+    <div class="panel">
+      <div class="panel-heading">
+        <div class="panel-title">
+          标题
+        </div>
+      </div>
+      <div class="panel-body input-grid2">
+        <ngg-input [(property)] = "record.user" [required]="true" [title]="'用户'" [readonly]="true"></ngg-input>
+        <ngg-input [(property)] = "record.desc" [required]="false" [title]="'描述'" [readonly]="true"></ngg-input>
+        <ngg-input [(property)] = "record.status" [required]="true" [title]="'状态'" [readonly]="true"></ngg-input>
+        <ngg-input [type]="'date'" [(property)] = "record.date" [required]="false" [title]="'时间'" [readonly]="true"></ngg-input>
+        <ngg-input [(property)] = "record.address" [required]="false" [title]="'地址'" [readonly]="true"></ngg-input>
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-primary" (click)="dialog.show(record)">详情</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<app-create-map-text #createMapTextDlg (onSubmit)="createMapLabel(createMapTextDlg.geometry,createMapTextDlg.label)"></app-create-map-text>
+<div class="map-draw-tool p-sm">
+  <span>绘画工具：</span>
+
+  <div class="checkbox c-checkbox m0" style="display: inline-block">
+    <label>
+      <input type="checkbox" [(ngModel)]="is_show_draw_layer" (ngModelChange)="loadGeo()" />
+      <span class="fas fa-check" style="margin-top:2px"></span>
+    </label>
+  </div>
+
+  <button [disabled]="!is_init_map || !is_init_draw_toolbar || !is_init_edit_toolbar || !is_show_draw_layer" tooltip="保存" placement="bottom" class="btn btn-danger btn-xs" type="button" (click)="saveGeo()"><em class="fas fa-save" style="font-size: 15px;min-width: 15px;"></em></button>
+  <button [disabled]="!is_init_map || !is_init_draw_toolbar || !is_init_edit_toolbar || !is_show_draw_layer" tooltip="标签" placement="bottom" class="btn btn-danger btn-xs text-bold" style="padding-right: 8px;padding-right:8px" type="button" (click)="activateDrawTool('point','label')"><em style="font-size: 12px;min-width: 15px;">T</em></button>
+
+</div>

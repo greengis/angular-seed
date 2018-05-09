@@ -1,0 +1,22 @@
+<div class="login-wrapper">
+  <div class="login-panel login-panel-shadow">
+      <div class="login-body">
+        <p class="text-center login-logo"><img src="assets/img/login/login-logo.png"></p>
+        <form #loginForm="ngForm" class="form-validate"  role="form" (submit)="login()">
+          <div class="input-grid">
+            <ngg-input [(property)] = "user.username" [required]="true" [title]="'用户'" [icon]="'fas fa-user'" [width]="'80px'"></ngg-input>
+            <ngg-input [type]="'password'" [(property)] = "user.password" [required]="true" [title]="'密码'" [icon]="'fas fa-lock'" [width]="'80px'"></ngg-input>
+          </div>
+          <div class="login-button">
+            <button class="btn btn-lg btn-primary" [ngClass]="{'disabled':!loginForm.form.valid}" type="submit">登 录</button>
+          </div>
+        </form>
+      </div>
+      <div class="login-footer">
+        <span>&copy;</span>
+        <span> 2018 </span>
+        <span>-</span>
+        <span> 光大海绵 </span>
+      </div>
+  </div>
+</div>

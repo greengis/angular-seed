@@ -1,0 +1,165 @@
+{
+  "layers" : {
+    "sponge_layers": [
+      {
+        "layer_name": "project",
+        "is_check": false,
+        "layer_type": 1,
+        "layer_index": 12,
+        "display_name": "海绵项目",
+        "custom_identify": true,
+        "identify":{
+          "field" : "项目名"
+        }
+      }
+    ],
+    "region_layers": [
+      {
+        "layer_name": "partition",
+        "is_check": true,
+        "layer_type": 3,
+        "layer_index": 14,
+        "display_name": "示范区分区"
+      }, {
+        "layer_name": "partition_boundary",
+        "is_check": false,
+        "layer_type": 3,
+        "layer_index": 15,
+        "hidden" : true,
+        "display_name": "示范区分区边界"
+      },{
+        "layer_name": "region",
+        "is_check": true,
+        "layer_type": 3,
+        "layer_index": 16,
+        "display_name": "示范区范围"
+      }
+    ],
+    "monitor_layers": [],
+    "drainage_layers": [
+      {
+        "layer_name": "flooding_point",
+        "is_check": false,
+        "layer_type": 1,
+        "layer_index": 2,
+        "display_name": "积水点",
+        "tooltip": {
+          "title_field" : "位置"
+        }
+      },{
+        "layer_name": "outfall",
+        "is_check": false,
+        "layer_type": 1,
+        "layer_index": 3,
+        "display_name": "排放口"
+      },{
+        "layer_name": "pump",
+        "is_check": false,
+        "layer_type": 1,
+        "layer_index": 4,
+        "display_name": "泵站"
+      },{
+        "layer_name": "sewage_plant",
+        "is_check": false,
+        "layer_type": 1,
+        "layer_index": 6,
+        "display_name": "污水处理厂"
+      },{
+        "layer_name": "quality_plant",
+        "is_check": false,
+        "layer_type": 1,
+        "layer_index": 5,
+        "display_name": "水质处理厂"
+      }, {
+        "layer_name": "rain_node",
+        "is_check": false,
+        "layer_type": 1,
+        "layer_index": 7,
+        "display_name": "雨水节点"
+      }, {
+        "layer_name": "sewage_node",
+        "is_check": false,
+        "layer_type": 1,
+        "layer_index": 8,
+        "display_name": "污水节点"
+      }, {
+        "layer_name": "rain_pipe",
+        "is_check": false,
+        "layer_type": 2,
+        "layer_index": 9,
+        "display_name": "雨水管线"
+      }, {
+        "layer_name": "sewage_pipe",
+        "is_check": false,
+        "layer_type": 2,
+        "layer_index": 10,
+        "display_name": "污水管线"
+      }
+    ],
+    "supply_layers": [],
+    "base_layers": [
+    ]
+  },
+  "thematic_layers":[
+    {
+      "layer_name": "nianjingliuzongliangkongzhilv",
+      "is_check": false,
+      "layer_type": "水生态",
+      "display_name": "年径流总量控制率"
+    },
+    {
+      "layer_name": "shengtaianxianhuifu",
+      "is_check": false,
+      "layer_type": "水生态",
+      "display_name": "生态岸线恢复"
+    },
+    {
+      "layer_name": "chengshiredaoxiaoying",
+      "is_check": false,
+      "layer_type": "水生态",
+      "display_name": "城市热岛效应"
+    },
+    {
+      "layer_name": "shuihuanjingzhiliang",
+      "is_check": false,
+      "layer_type": "水环境",
+      "display_name": "水环境质量"
+    },
+    {
+      "layer_name": "chengshimianyuanwurankongzhi",
+      "is_check": false,
+      "layer_type": "水环境",
+      "display_name": "城市面源污染控制"
+    },
+    {
+      "layer_name": "wushuizaishengliyonglv",
+      "is_check": false,
+      "layer_type": "水资源",
+      "display_name": "污水再生利用率"
+    },
+    {
+      "layer_name": "yushuiziyuanliyonglv",
+      "is_check": false,
+      "layer_type": "水资源",
+      "display_name": "雨水资源利用率"
+    },
+    {
+      "layer_name": "neilaojishuidian",
+      "is_check": false,
+      "layer_type": "水安全",
+      "display_name": "内涝积水点"
+    },
+    {
+      "layer_name": "shuiyuandi",
+      "is_check": false,
+      "layer_type": "水安全",
+      "display_name": "水源地"
+    },
+    {
+      "layer_name": "chengshifanghongdi",
+      "is_check": false,
+      "layer_type": "水安全",
+      "display_name": "城市防洪堤"
+    }
+  ]
+}

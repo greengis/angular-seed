@@ -1,0 +1,39 @@
+<div class="module-content">
+  <div class="module-header">
+    <h5 class="module-header-title"><i class="fas fa-columns"></i>面板示例</h5>
+  </div>
+  <div class="module-body">
+    <div class="panel">
+      <div class="panel-heading">
+        <div class="panel-title">
+          标题
+        </div>
+      </div>
+      <div class="panel-body">
+        内容
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-success">确定</button>
+        <button class="btn btn-danger">取消</button>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top :10px">
+      <div class="panel-heading">
+        <div class="panel-title">
+          标题
+        </div>
+        <div class="panel-close">
+          <span class="fas" [ngClass]="{'fa-angle-down' : !panelVisible, 'fa-angle-up' : panelVisible}" (click)="panelVisible = !panelVisible"></span>
+        </div>
+      </div>
+      <div class="panel-body" *ngIf="panelVisible">
+        内容
+      </div>
+      <div class="panel-footer" *ngIf="panelVisible">
+        <button class="btn btn-success">确定</button>
+        <button class="btn btn-danger">取消</button>
+      </div>
+    </div>
+  </div>
+</div>

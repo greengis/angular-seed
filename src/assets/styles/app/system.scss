@@ -1,0 +1,169 @@
+html, body {
+    width: 100% !important;
+    height: 100% !important;
+}
+.system-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 240px auto;
+    background: #ffffff;
+}
+.system-content .system-left{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    background: rgba(253,253,253,.95);
+    border-right: 1px solid #ddd;
+    transition: width .2s ease-in-out;
+}
+.system-content .system-body{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.system-content .system-left .system-left-header{
+    height: 100%;
+}
+.system-content .system-left .system-left-header .title{
+    float: left;
+    margin: 0 20px;
+    color: #333;
+    line-height: 50px;
+    font-size: 16px;
+}
+.system-content .system-left .system-left-header .more{
+    float: right;
+    margin: 0 20px;
+    line-height: 50px;
+}
+.system-content .system-left .system-left-header .more i{
+    color: $color-primary;
+}
+.system-content .system-left .system-left-body{
+    position: relative;
+    overflow-y: auto;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.system-content .system-left .system-left-body .search-area{
+    padding: 0 20px 10px;
+    position: relative;
+}
+.system-content .system-left .system-left-body .section-area{
+    position : absolute;
+    width : 100%;
+    overflow-y : auto;
+    top : 46px;
+    bottom : 0px;
+}
+
+
+/* section */
+.section{
+    margin-bottom: 2px;
+}
+.section .action{
+    color: #a2a2a2;
+    font-size: 18px;
+    visibility: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 24px;
+    text-align: center;
+}
+
+.section .section-header{
+    margin-bottom: 2px;
+    padding: 8px 20px;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.section .section-header:hover{
+    text-decoration: none;
+    box-shadow: 0 0 8px 2px #eee;
+}
+.section .section-header.active{
+    background: $color-primary-bg;
+    text-decoration: none;
+    color: $color-primary;
+    border-right: 4px solid $color-primary;
+}
+.section .section-header:focus,
+.section .section-header:visited {
+    outline: none;
+}
+.section .section-header .expand-icon{
+    color: #aaa;
+    display: inline-block;
+    width: 14px;
+    vertical-align: middle;
+}
+.section .section-header .title,
+.section .section-header:hover .title{
+    color: #333;
+}
+
+.section .section-header a.title:focus,
+.section .section-header a.title:hover,
+.section .section-header a.title:visited{
+    text-decoration: none;
+}
+.section .section-header .action{
+    top: 5px;
+}
+
+.section .section-body .section-item{
+    color: #666;
+    display: block;
+    padding: 9px 20px 9px 36px;
+    position: relative;
+    overflow: hidden;
+    border-right: 4px solid transparent;transition: box-shadow .2s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.section .section-body .section-item:hover {
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 0 8px 2px #eee;
+}
+.section .section-body .section-item.active{
+    background: $color-primary-bg;
+    text-decoration: none;
+    color: $color-primary;
+    border-right: 4px solid $color-primary;
+}
+.section .section-body .section-item:focus,
+.section .section-body .section-item:visited {
+    text-decoration: none;
+}
+.section .section-body .section-item.active:hover{
+    background: 0 0;
+}
+.section .section-body .section-item .item-icon{
+    color: #aaa;
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    top: 1px;
+}
+.section .section-body .section-item.active .item-icon {
+    color: $color-primary;
+}
+.section .section-body .section-item:hover .action{
+    visibility: visible;
+}
+.section .section-header:hover .action{
+    visibility: visible;
+}

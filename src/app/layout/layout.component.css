@@ -1,0 +1,19 @@
+.root-content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 70px auto;
+}
+.root-left{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.root-body{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: white;
+}

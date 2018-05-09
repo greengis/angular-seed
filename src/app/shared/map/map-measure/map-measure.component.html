@@ -1,0 +1,6 @@
+<div class="map-measure-tool p-sm">
+  <span>测量工具：</span>
+  <button class=" btn btn-danger btn-xs " type="button" (click)="activateDrawTool('polygon')" [disabled]="!is_init_map || !is_init_toolbar"><em class="far fa-square" style="font-size: 15px;min-width: 15px;"></em></button>
+  <button class=" btn btn-danger btn-xs " type="button" (click)="activateDrawTool('polyline')" [disabled]="!is_init_map || !is_init_toolbar"><em class="fas fa-minus" style="font-size: 15px;min-width: 15px;"></em></button>
+  <button class=" btn btn-danger btn-xs " type="button" (click)="clearMeasureLayer()" [disabled]="!is_init_map || !is_init_toolbar"><em class="fas fa-trash" style="font-size: 15px;min-width: 15px;"></em></button>
+</div>

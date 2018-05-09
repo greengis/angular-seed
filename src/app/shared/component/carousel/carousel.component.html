@@ -1,0 +1,12 @@
+<div class="ngg-carousel" > <!--[ngStyle]="{ 'background-image' : 'url('+ url + ')'}"-->
+  <div class="ngg-carousel-content">
+    <a class="ngg-carousel-image" [href]="url" data-fancybox="images">
+      <img class="ngg-carousel-image" [src]="url" />
+    </a>
+  </div>
+
+  <div class="ngg-carousel-left" (click)="prev()" ><span class="fas fa-arrow-alt-circle-left" [tooltip]="(index+1) + '/' + urls.length"></span></div>
+  <div class="ngg-carousel-right" (click)="next()" ><span class="fas fa-arrow-alt-circle-right" [tooltip]="(index+1) + '/' + urls.length"></span></div>
+
+  <div class="ngg-carousel-index">{{(index+1) + '/' + urls.length}}</div>
+</div>

@@ -1,0 +1,54 @@
+.tab-heading {
+    padding : 0px 10px;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #fdfdfd;
+}
+.tab-heading .nav-pills {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+.tab-heading .nav-pills > li  {
+    float: none;
+    display: inline-block;
+}
+.tab-heading .nav-pills > li > a{
+    border-radius: 0px;
+}
+.tab-heading li a {
+    min-width: 80px;
+    text-align: center;
+    padding: 10px 15px;
+    color: #333;
+    cursor: pointer;
+}
+.tab-heading li.active a {
+    border-bottom: solid 2px $color-primary;
+}
+.tab-heading li.active a,
+.tab-heading li.active a:focus,
+.tab-heading li.active a:hover{
+    background: 0 0;
+    color: $color-primary;
+}
+.tab-heading li a:focus,
+.tab-heading li a:hover {
+    background: 0 0;
+    border-bottom: solid 2px $color-primary;
+}
+
+.tab-content > .tab {
+    display: none;
+    animation-name: fadeInRight;
+    -webkit-animation-name: fadeInRight;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+.tab-content > .active {
+    display: block;
+}

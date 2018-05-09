@@ -1,0 +1,29 @@
+<div class="module-content">
+    <div class="module-header">
+        <div class="module-header-title">
+            <i class="far fa-user"></i>组件示例
+        </div>
+        <div class="module-header-space"></div>
+        <div class="module-header-tabs">
+            <div class="tab-heading">
+                <ul class="nav nav-pills">
+                    <li role="presentation" [routerLinkActive]="['active']">
+                        <a [routerLink]="'/dashboard/form/checkbox'">复选框</a>
+                    </li>
+                    <li role="presentation" [routerLinkActive]="['active']">
+                        <a [routerLink]="'/dashboard/form/radio'">单选框</a>
+                    </li>
+                    <li role="presentation" [routerLinkActive]="['active']">
+                        <a [routerLink]="'/dashboard/form/input'">输入框</a>
+                    </li>
+                    <li role="presentation" [routerLinkActive]="['active']">
+                        <a [routerLink]="'/dashboard/form/button'">按钮标签</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="module-body">
+        <router-outlet></router-outlet>
+    </div>
+</div>
