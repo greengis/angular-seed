@@ -10,7 +10,8 @@ export class SearchComponent implements OnInit {
   option = {
     keyword  : "",
     start_date : moment().subtract(7, 'day').toDate(),
-    end_date :  moment().toDate()
+    end_date :  moment().toDate(),
+    range : [moment().subtract(7, 'day').toDate(),  moment().toDate()]
   }
 
 

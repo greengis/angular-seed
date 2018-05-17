@@ -16,9 +16,9 @@
     <div class="panel" style="margin-top: 10px;">
       <div class="panel-body">
         <div class="search-area">
-          <nz-datepicker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzPlaceHolder]="'选择月份'" [nzMode]="'month'" [nzFormat]="'YYYY年MM月'" [nzAllowClear]="false"></nz-datepicker>
-          <nz-datepicker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzPlaceHolder]="'选择日期'"></nz-datepicker>
-          <nz-datepicker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzPlaceHolder]="'选择时间'" [nzFormat]="'YYYY-MM-DD HH:mm:ss'" [nzShowTime]="true"></nz-datepicker>
+          <nz-month-picker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzPlaceholder]="'选择月份'" [nzAllowClear]="false"></nz-month-picker>
+          <nz-date-picker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzPlaceholder]="'选择日期'"></nz-date-picker>
+          <nz-date-picker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzPlaceholder]="'选择时间'" [nzFormat]="'YYYY-MM-DD HH:mm:ss'" [nzShowTime]="true"></nz-date-picker>
           <div class="search-space"></div>
           <div class="search-input search-input-sm">
             <i class="fas fa-search search-icon"></i>
@@ -32,9 +32,10 @@
     <div class="panel" style="margin-top: 10px;">
       <div class="panel-body">
         <div class="search-area">
-          <nz-datepicker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzFormat]="'YYYY-MM-DD'" [nzDisabledDate]="disabledStartDate"  [nzPlaceHolder]="'开始日期'" [nzAllowClear]="false"></nz-datepicker> 至
-          <nz-datepicker style="margin-left: 5px;margin-right:5px;" [(ngModel)]="option.end_date" [nzFormat]="'YYYY-MM-DD'" [nzDisabledDate]="disabledEndDate"  [nzPlaceHolder]="'结束日期'" [nzAllowClear]="false"></nz-datepicker>
-          <nz-input style="width:250px;margin-right:5px;" [ngModel]="(option.start_date | date : 'yyyy-MM-dd') + '至' + (option.end_date | date : 'yyyy-MM-dd')" ></nz-input>
+          <!--<nz-date-picker style="margin-right:5px;" [(ngModel)]="option.start_date" [nzFormat]="'YYYY-MM-DD'" [nzDisabledDate]="disabledStartDate"  [nzPlaceholder]="'开始日期'" [nzAllowClear]="false"></nz-date-picker> 至
+          <nz-date-picker style="margin-left: 5px;margin-right:5px;" [(ngModel)]="option.end_date" [nzFormat]="'YYYY-MM-DD'" [nzDisabledDate]="disabledEndDate"  [nzPlaceholder]="'结束日期'" [nzAllowClear]="false"></nz-date-picker>-->
+          <nz-range-picker [(ngModel)]="option.range"></nz-range-picker>
+          <input nz-input style="width:250px;margin-right:5px;" [ngModel]="(option.range[0] | date : 'yyyy-MM-dd') + '至' + (option.range[1] | date : 'yyyy-MM-dd')" />
           <div class="search-space"></div>
           <div class="search-input search-input-sm">
             <i class="fas fa-search search-icon"></i>

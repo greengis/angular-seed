@@ -31,7 +31,7 @@
     "jquery": "^3.2.1",
     "lodash": "^4.17.5",
     "moment": "^2.18.1",
-    "ng-zorro-antd": "^0.6.15",
+    "ng-zorro-antd": "^0.7.0",
     "ng2-file-upload": "^1.2.1",
     "ngx-bootstrap": "^2.0.0-rc.0",
     "rxjs": "^5.5.2",
