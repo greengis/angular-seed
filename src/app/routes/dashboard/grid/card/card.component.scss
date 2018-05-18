@@ -108,6 +108,7 @@
   grid-gap : 5px;
   height: 100%;
   grid-template-rows: 200px 1fr 15px 25px;
+  grid-template-columns: 1fr;
   grid-template-areas: "a"
                           "b"
                           "c"
