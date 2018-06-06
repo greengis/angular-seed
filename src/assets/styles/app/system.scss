@@ -171,3 +171,41 @@ html, body {
 .section .section-header:hover .action{
     visibility: visible;
 }
+
+
+.router-item{
+    display : flex;
+    align-items: center;
+    padding : 10px 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.router-item-content{
+    flex : 1 1 0;
+}
+
+.router-item-action{
+    cursor: pointer;
+}
+
+.router-item:hover{
+    text-decoration: none;
+    box-shadow: 0 0 8px 2px #eee;
+}
+.router-item.active{
+    background: $color-primary-bg;
+    color: $color-primary;
+    border-right: 4px solid $color-primary;
+}
+.router-item:focus,
+.router-item:visited {
+    outline: none;
+}
+.router-item .title,
+.router-item:hover .title{
+    color: #333;
+}

@@ -3,6 +3,14 @@
   opacity: 1;
 }
 
+.input-group{
+  width: 100%;
+}
+
+.input-group-addon{
+  width :120px;
+}
+
 .ng-valid[required], .ng-valid.required  {
   border-left: 2px solid #22d7bb; /* green */
 }
