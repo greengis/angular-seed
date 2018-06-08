@@ -58,16 +58,21 @@ export class AuthService {
     }*/
 
     getToken() {
-        return this.getUserFromStorage().token;
+        const user = this.getUserFromStorage();
+        if (user) {
+            return user.token;
+        }else{
+            return "";
+        }
     }
 
     setToken(user, token) {
         this.user = user;
         this.user.token = token;
-        const group = this.user.group;
-        delete this.user.group;
+        //const group = this.user.group;
+        //delete this.user.group;
         this.setUserToStorage(this.user);
-        this.user.group = group;
+        //this.user.group = group;
     }
 
     getHeader() {
@@ -96,8 +101,12 @@ export class AuthService {
 
     hasPrivilege(name):boolean {
         const user = this.getUserFromStorage();
-        const privilege = user.group.privileges.find(p =>{ return p.name === name; });
-        return privilege !=  undefined;
+        if (user && user.group) {
+            const privilege = user.group.privileges.find(p =>{ return p.name === name; });
+            return privilege !=  undefined;
+        } else {
+            return false;
+        }
     }
 
     canActivate() {
