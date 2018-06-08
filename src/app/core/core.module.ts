@@ -1,7 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
 
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
@@ -52,7 +52,7 @@ export class CoreModule {
     return {
       ngModule: CoreModule,
       providers: [MenuService,
-        ConfigService]
+        ConfigService,{ provide: NZ_I18N, useValue: zh_CN }]
     };
   }
   static forChild(): ModuleWithProviders {

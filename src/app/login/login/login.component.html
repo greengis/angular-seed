@@ -2,7 +2,7 @@
     <div class="login-panel login-panel-shadow">
         <div class="login-body">
             <!-- <p class="text-center login-logo"><img src="assets/img/login/login-logo.png"></p>-->
-            <h2 class="text-center login-title">Angular</h2>
+            <h2 class="text-center login-title">{{configService.app.title}}</h2>
             <form #loginForm="ngForm" class="form-validate" role="form" (submit)="login()">
                 <div class="input-grid">
                     <ngg-input [(property)]="user.username" [required]="true" [title]="'用户'" [icon]="'fas fa-user'"

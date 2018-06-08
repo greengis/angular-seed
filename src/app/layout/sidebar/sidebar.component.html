@@ -1,7 +1,7 @@
 <div class="sidebar">
     <div class="sidebar-header">
         <a class="team-logo">
-            <img width="40" align="center" alt="光大海绵" tooltip="光大海绵" placement="bottom"
+            <img width="40" align="center" [tooltip]="configService.app.title" placement="bottom"
                  src="http://7xlblb.dl1.z0.glb.clouddn.com/logo-guangda.png">
         </a>
     </div>
@@ -23,6 +23,6 @@
         <span class="avatar-text" tooltip="退出登录">
             <i class="fas fa-sign-out-alt" (click)="logout()" ></i>
         </span>
-        <div class="version">V 1.0.0</div>
+        <div class="version">V {{configService.app.version}}</div>
     </div>
 </div>

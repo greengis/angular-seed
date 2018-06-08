@@ -13,15 +13,16 @@ import {SocketService} from "../shared/util/socket.service";
     styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit, OnDestroy {
-    full: boolean;
-    auto_refresh_subscription: any;
+
+    //auto_refresh_subscription: any;
 
     constructor(public authService: AuthService, public configService: ConfigService, private socketService: SocketService, private userLogService: UserLogService, private router: Router) {
-        this.authService.getUserFromStorage();
+        document.title = this.configService.app.title
+        //this.authService.getUserFromStorage();
     }
 
     ngOnInit() {
-        this.auto_refresh_subscription = Observable.interval(1000 * 60 * 60 * 24).subscribe(() => {
+        /*this.auto_refresh_subscription = Observable.interval(1000 * 60 * 60 * 24).subscribe(() => {
             this.authService.verify().subscribe(res => {
                 if (res.result) {
                     this.authService.setToken(res.user, res.token);
@@ -29,7 +30,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
                     this.router.navigate(['/login']);
                 }
             });
-        });
+        });*/
 
         /*this.socketService.connect();
         this.socketService.socket.on('connect', () => {
@@ -50,17 +51,17 @@ export class LayoutComponent implements OnInit, OnDestroy {
     }
 
     logout() {
-        this.userLogService.create({
+        /*this.userLogService.create({
             action: '登出',
             user: this.authService.user
         }).subscribe();
         this.authService.logout();
-        this.router.navigate(['/login']);
+        this.router.navigate(['/login']);*/
     }
 
 
     ngOnDestroy(): void {
-        this.auto_refresh_subscription && this.auto_refresh_subscription.unsubscribe();
+        //this.auto_refresh_subscription && this.auto_refresh_subscription.unsubscribe();
         //this.socketService.disconnect();
     }
 

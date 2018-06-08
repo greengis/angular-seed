@@ -17,16 +17,17 @@ export class LoginComponent implements OnInit {
         username : "",
         password: ""
     };
-    slides: Array<any> = [];
+
     constructor(public configService: ConfigService, private userLogService: UserLogService, private jsonService: JsonService, private privilegeService:PrivilegeService, private router: Router, private authService: AuthService) {
-       this.slides = this.configService.splash;
+        document.title = this.configService.app.title
     }
 
     ngOnInit() {
     }
 
     login() {
-        this.authService.login(this.user)
+        this.router.navigate(['/dashboard']);
+        /*this.authService.login(this.user)
             .subscribe(res => {
                 if(res.result){
                     this.authService.setUserToStorage(res.data);
@@ -50,7 +51,7 @@ export class LoginComponent implements OnInit {
                     type: 'warning',
                     confirmButtonText: '确认'
                 })
-            });
+            });*/
 
     }
 

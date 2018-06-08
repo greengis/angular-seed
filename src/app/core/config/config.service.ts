@@ -5,7 +5,7 @@ import {environment} from "../../../environments/environment";
 export class ConfigService {
 
     public city_list: any = {
-        GuangDa :{
+        Demo :{
             data_map_server: 'http://www.ispongecity.com:6080/arcgis/rest/services/GDDataMap/MapServer',
             geometry_server: 'http://221.131.182.28:6082/arcgis/rest/services/Utilities/Geometry/GeometryServer',
             print_server:"http://www.ispongecity.com:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
@@ -15,10 +15,15 @@ export class ConfigService {
                 city: "镇江",
                 cityid: "231",
                 parentid: "15"
+            },
+            app : {
+                name : "Demo",
+                title : "Demo",
+                version : "1.0.0"
             }
         }
     };
-    public city_name: string = "GuangDa";
+    public city_name: string = "Demo";
 
     public data_map_server: string = this.city_list[this.city_name].data_map_server;//'http://115.28.153.216:6080/arcgis/rest/services/YJDataMap/MapServer';
     public geometry_server: string = this.city_list[this.city_name].geometry_server;//'http://115.28.153.216:6080/arcgis/rest/services/Utilities/Geometry/GeometryServer';
@@ -29,7 +34,7 @@ export class ConfigService {
     public image_map_server: string = this.city_list[this.city_name].image_map_server;
 
     public logo: any = this.city_list[this.city_name].logo;
-    public splash: any = this.city_list[this.city_name].splash;
+
     public app: any = this.city_list[this.city_name].app;
 
     public data_map_config_json: any = "assets/json/map/data/" + this.city_name + ".json";
