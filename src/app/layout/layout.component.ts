@@ -6,6 +6,7 @@ import "rxjs/add/observable/interval";
 import {Router} from "@angular/router";
 import {UserLogService} from "../shared/user/user-log.service";
 import {SocketService} from "../shared/util/socket.service";
+import * as esriLoader from 'esri-loader';
 
 @Component({
     selector: 'app-layout',
@@ -17,11 +18,16 @@ export class LayoutComponent implements OnInit, OnDestroy {
     //auto_refresh_subscription: any;
 
     constructor(public authService: AuthService, public configService: ConfigService, private socketService: SocketService, private userLogService: UserLogService, private router: Router) {
-        document.title = this.configService.app.title
+        document.title = this.configService.app.title;
         //this.authService.getUserFromStorage();
+
     }
 
     ngOnInit() {
+        const options = {
+            url: 'assets/js/map/init.js'
+        };
+        esriLoader.loadModules([], options);
         /*this.auto_refresh_subscription = Observable.interval(1000 * 60 * 60 * 24).subscribe(() => {
             this.authService.verify().subscribe(res => {
                 if (res.result) {

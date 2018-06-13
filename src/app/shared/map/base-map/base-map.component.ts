@@ -22,11 +22,8 @@ export class BaseMapComponent implements OnInit {
 
     ngOnInit() {
         const me = this;
-        const options = {
-            url: 'assets/js/map/init.js'
-        };
         esriLoader.loadModules(["esri/map", "esri/SpatialReference", "esri/domUtils", "esri/geometry/webMercatorUtils",
-            "esri/geometry/Point", "esri/extras/EmptyTileLayer", "dojo/dom", "dojo/on", "dojo/domReady!"], options).then(([Map, SpatialReference, domUtils, webMercatorUtils, Point, EmptyTileLayer, dom, on]) => {
+            "esri/geometry/Point", "esri/extras/EmptyTileLayer", "dojo/dom", "dojo/on", "dojo/domReady!"]).then(([Map, SpatialReference, domUtils, webMercatorUtils, Point, EmptyTileLayer, dom, on]) => {
 
             this.wrapper.option = this.wrapper.option || {};
             this.wrapper.option.logo = this.wrapper.option.hasOwnProperty('logo') ? this.wrapper.option.logo : false;
