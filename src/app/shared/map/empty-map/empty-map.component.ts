@@ -1,10 +1,12 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import * as esriLoader from 'esri-loader';
+import {CoreMapService} from "../core-map.service";
 
 @Component({
     selector: 'app-empty-map',
     templateUrl: './empty-map.component.html',
-    styleUrls: ['./empty-map.component.scss']
+    styleUrls: ['./empty-map.component.scss'],
+    providers: [CoreMapService]
 })
 export class EmptyMapComponent implements OnInit {
 
@@ -12,7 +14,7 @@ export class EmptyMapComponent implements OnInit {
     @Input() wrapper;
     @Output() mapInit = new EventEmitter<any>();
 
-    constructor() {
+    constructor(private coreMapService: CoreMapService) {
 
     }
 
@@ -27,8 +29,7 @@ export class EmptyMapComponent implements OnInit {
             this.wrapper.map.spatialReference = new SpatialReference({
                 wkid: 102113
             });
-
-
+            this.coreMapService.init(this.wrapper.map);
             this.mapInit.emit();
         });
     }

@@ -11,7 +11,7 @@ import "rxjs/add/observable/fromEvent";
 export class EchartComponent implements OnInit, OnChanges, OnDestroy {
     @ViewChild('chartDiv') chartDiv: ElementRef;
     @Input() public option: any;
-    @Input() public clear_option: boolean;
+    @Input() public clear: boolean;
     chart: any;
     subscription: any;
 
@@ -35,7 +35,7 @@ export class EchartComponent implements OnInit, OnChanges, OnDestroy {
         // changes.prop contains the old and the new value...
         if (changes.option && changes.option.currentValue) {
             this.chart = this.chart || echarts.init(this.chartDiv.nativeElement);
-            if (this.clear_option) {
+            if (this.clear) {
                 this.chart.clear();
                 this.chart.setOption(this.option);
                 if(this.chartDiv.nativeElement.clientHeight > 0){
